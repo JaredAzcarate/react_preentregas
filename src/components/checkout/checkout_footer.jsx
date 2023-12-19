@@ -49,14 +49,18 @@ export default function Checkout_footer() {
                         </div>
 
                     </div>
+                    <div>
+                      <p className='text-xs text-gray-500'><span className='font-bold'>Bases y Condiciones:</span> La aplicación es responsable por transacciones mal operadas. El usuario debe notificar cualquier inconveniente. La plataforma se compromete a resolver problemas de manera eficiente.</p>
 
-                    <p className='text-xs text-gray-500'><span className='font-bold'>Bases y Condiciones:</span> La aplicación es responsable por transacciones mal operadas. El usuario debe notificar cualquier inconveniente. La plataforma se compromete a resolver problemas de manera eficiente.</p>
+                      <a className='text-xs font-light text-yellow' href='https://www.figma.com/file/yMAdfMXCZ9Cz9TKhkTetz5/App-Mac-Donalds?type=design&node-id=0%3A1&mode=design&t=aleMRuX9XoxLN14H-1' target='black'>Link de figma</a>
+                    </div>
+
                 </div>
                 
                 <div className='w-6/12 grid grid-cols-2 gap-2'>
-                    <Button haveLink={true} isOutline={false} text={'Ver mi pedido'} setClass={'col-span-2 font-bold'}/>
-                    <Button haveLink={true} isOutline={true} text={'Volver a empezar'} setClass={'col-span-1 font-bold'}/>
-                    <Button haveLink={true} isOutline={true} haveIcon={true} setIcon={'/icons/accesibilidad.png'} text={'Accesibilidad'} setClass={'col-span-1 font-bold'}/>
+                    <Button haveLink={true} isOutline={false} text={'Ver mi pedido'} setClass={'col-span-2 font-bold py-4'}/>
+                    <Button haveLink={true} isOutline={true} text={'Volver a empezar'} setClass={'col-span-1 font-bold py-4'}/>
+                    <Button haveLink={true} isOutline={true} haveIcon={true} setIcon={'/icons/accesibilidad.png'} text={'Accesibilidad'} setClass={'col-span-1 font-bold py-4'}/>
                 </div>
             </div>
 

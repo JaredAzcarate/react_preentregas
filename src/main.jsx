@@ -2,11 +2,11 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
-import Navbar from './components/nav/navbar.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Navbar />
-    <App />
+    <div className='w-full max-w-screen-md mx-auto'>
+      <App />
+    </div>
   </React.StrictMode>,
 )
