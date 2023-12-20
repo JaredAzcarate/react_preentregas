@@ -7,7 +7,7 @@ const menu = [
 
     {title: 'Sandwiches', 
     img: 'https://mcdonalds.es/api/cms/images/mcdonalds-es/f45ecb36-e726-48d2-b105-40511ca18d4c_mcd-menu-productos-sandwiches.png?auto=compress,format',
-    link: '/productos',
+    link: '/productos/sandwiches',
     },
 
     {title: 'McCrispy®', 

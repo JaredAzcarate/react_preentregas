@@ -11,8 +11,8 @@ export default function Navbar() {
             
             <div className=" bg-gray-100">
                 {Data_menu.map(item =>(
-                    <NavLink key={item.title} to={item.link} className={` bg-white hover:bg-gray-100 hover:font-bold transition-all flex gap-5 justify-start items-center p-5 border-b border-gray-300 ${({ isActive }) =>
-                    isActive ? 'font-bold' : ''} ${item.class}`}>
+                    <NavLink key={item.title} to={item.link} className={({ isActive }) =>
+                    isActive ? 'bg-gray-100 font-bold transition-all flex gap-5 justify-start items-center p-5 border-b border-gray-300 ${item.class}' : `bg-white hover:bg-gray-100 hover:font-bold transition-all flex gap-5 justify-start items-center p-5 border-b border-gray-300 ${item.class}`}>
                         <img src={item.img} className=" w-16"></img>
                         <p className="text-base text-gray-500" >{item.title}</p>
                     </NavLink>
