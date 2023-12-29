@@ -28,13 +28,12 @@ export default function Products_grid() {
     return (
         <>
             {products ? (
-                <section className=" grid grid-cols-3 gap-5" data-aos='fade-up'>
-                    {products.map((category) => (
-                        <>
-                        {category.productos.map((producto) => (
-                            <Product_item key={producto.id} id={producto.id} categoria={producto.categoria} novedad={producto.novedad} title={producto.nombre} img={producto.img} price={producto.precio}/>
-                        ))}
-                        </>
+                <section className=" grid grid-cols-3 gap-5 max-w-screen-lg mx-auto" data-aos='fade-up'>
+                    {products.map((producto) => (
+                            <Product_item 
+                            key={producto.id}
+                            item={producto} 
+                            />
                     ))}
                 </section>                        
             ):(

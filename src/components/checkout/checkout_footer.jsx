@@ -22,12 +22,13 @@ export default function Checkout_footer() {
 
     return (
       <>
-        <footer className='fixed bottom-0 left-0 w-full h-44 bg-gray-100 flex justify-between items-center'>
+        <footer className='w-full mt-20 h-44 bg-gray-100 flex justify-between items-center'>
 
             <div className=' bg-yellow h-full w-[15rem] flex flex-col justify-center items-center gap-5'>
                 <img src='/icons/scan.png' alt='escanear con camara' className='w-16'></img>
                 <p className='text-center leading-4'>Escanea para <span className=' font-bold'> <br></br>iniciar sesión</span></p>
             </div>
+            
             <div className=' w-8/12 mx-auto flex justify-center gap-5'>
 
                 <div className=' w-6/12 grid gap-5'>
