@@ -7,6 +7,8 @@ import Button from "./components/buttons/button"
 import Checkout_nav from "./components/checkout/checkout_nav"
 import Layout_center from "./components/layout/layout_center"
 import { useNavigate } from "react-router-dom";
+import { collection, doc, getDoc, getDocs } from "firebase/firestore"
+import { db } from "./firebase/config"
 
 
 export default function Customize_Menu() {
@@ -29,19 +31,18 @@ export default function Customize_Menu() {
     /* UseEffect para simular la obtencion de datos */
     useEffect( () => {
 
-        /* Se utiliza una promesa para buscar el producto dentro del array original con todos los productos */
-        buscar_datos
+        const docRef = doc(db, 'productos', product_id)
 
-            .then(( productos )=> {
-                const buscarProducto = productos.find(item => item.id === Number(product_id))
-                setProductoAgregar(buscarProducto)
-                return buscarProducto
+        getDoc( docRef )
+            .then((doc)=>{
+                const prod = {
+                    ...doc.data(),
+                    id: doc.id
+                }
+                setProducto([prod])
+                setProductoAgregar(prod)
             })
 
-            .then(producto_escogido => {
-                /* Se alamacena el objeto filtrado dentro de un array para poder manipular con map */
-                setProducto([producto_escogido])
-            })
 
     }, [])
 

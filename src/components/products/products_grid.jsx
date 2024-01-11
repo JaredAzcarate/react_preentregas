@@ -3,6 +3,8 @@ import Product_item from "./product_item"
 import State_pending from "../states/state_pending"
 import { useParams } from 'react-router-dom'
 import { buscar_datos } from "../../utils/new_promise"
+import { collection, getDocs } from "firebase/firestore"
+import { db } from "../../firebase/config"
 
 
 export default function Products_grid() {
@@ -14,15 +16,33 @@ export default function Products_grid() {
 
     useEffect(() => {
 
-        buscar_datos
+/*         buscar_datos
             .then( productos => {
                 const filter = category
                 ? productos.filter(item => item.categoria === category)
                 : productos.filter(item => item.categoria === 'hamburguesas-de-carne' || item.categoria === 'hamburguesas-de-pollo' || item.categoria === 'hamburguesas-de-pescado');
 
                 setProducts(filter)
+            }) */
+            
+    const productosRef = collection( db, 'productos' )
+
+    getDocs(productosRef)
+        .then((resp)=> {
+            const docs = resp.docs.map(doc => {
+                return{
+                    ...doc.data(),
+                    id: doc.id
+                }
             })
-        
+            
+            const filter = category
+                ? docs.filter(item => item.categoria === category)
+                : docs.filter(item => item.categoria === 'hamburguesas-de-carne' || item.categoria === 'hamburguesas-de-pollo' || item.categoria === 'hamburguesas-de-pescado');
+
+                setProducts(filter)
+        })
+
     }, [category]);
 
     return (

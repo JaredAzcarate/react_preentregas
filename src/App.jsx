@@ -7,6 +7,7 @@ import Sandwiches from './sandwiches';
 import { CartProvider} from './context/context_cart';
 import Customize_Menu from './customize';
 import Ticket from './components/ticket/ticket';
+import Login from './login/login';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
     <CartProvider>
       <BrowserRouter>
           <Routes>
+            <Route path='/detailInvoice' element={<Login />} />
             <Route path='/' element={<Select_place />} />
             <Route path='/productos/sandwiches' element={<Sandwiches />} />
             <Route path='/productos/:category' element={<Sandwiches />} />

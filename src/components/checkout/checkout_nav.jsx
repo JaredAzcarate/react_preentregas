@@ -45,7 +45,7 @@ export default function Checkout_nav() {
                           isOutline={false} 
                           text={'Finalizar compra'} 
                           setClass={`font-bold py-4`} 
-                          link={'/ticket'}
+                          link={'/detailInvoice'}
                           setEvent={()=> endPurchase()}
                           />
 
