@@ -41,8 +41,6 @@ export default function Products_grid() {
                 : docs.filter(item => item.categoria === 'hamburguesas-de-carne' || item.categoria === 'hamburguesas-de-pollo' || item.categoria === 'hamburguesas-de-pescado');
 
                 setProducts(filter)
-            
-            console.log(docs);
         })
 
     }, [category]);

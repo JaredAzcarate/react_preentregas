@@ -12,7 +12,7 @@ export default function Ticket() {
         <>  
             <Layout_center>
             
-                <Header title={'¡Gracias por tu compra!'} description={'Dirigite a la caja de pago en efectivo y presenta este ticket.'} centered={true}/>
+                <Header title={'¡Estamos preparando tu pedido!'} description={'Presenta tu ticket y retira tu pedido.'} centered={true}/>
                 <div className="w-96 mx-auto bg-gray-100 p-10 rounded-md shadow-lg" data-aos="fade-down">
                     <div className="flex justify-between mb-5 text-3xl font-bold" >
                         <p>Pedido</p>

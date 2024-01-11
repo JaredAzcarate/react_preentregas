@@ -1,6 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
+import { addDoc, collection, getFirestore } from "firebase/firestore";
+import data from '../../data/data_products.json' assert {type: 'json'}
 
 
 // Your web app's Firebase configuration
@@ -17,3 +18,12 @@ const firebaseConfig = {
 const app = initializeApp( firebaseConfig );
 
 export const db = getFirestore( app )
+
+/* const productoRef = collection(db, 'productos')
+
+data.forEach(item => {
+
+    delete item.id
+
+    addDoc(productoRef, item) 
+}) */
